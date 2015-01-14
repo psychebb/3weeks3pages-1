@@ -1,2 +1,93 @@
 @import "compass/reset";
 @import "compass/css3";
+@import "fontello.css";
+body{
+    background: url('../images/background.jpg');
+    margin: 0 auto;
+    color: #fff;
+    font-size: 14px;
+    font-family: 'Helvetica Neue';
+    a{
+        text-decoration: none;
+        color: #fff;
+        &:hover{
+            text-decoration: none;
+        }
+    }
+    .left{
+        float: left;
+    }
+    .right{
+        float: right;
+    }
+    header{
+        padding: 10px;
+        text-align: center;
+        background-color: #2d2d2d;
+        width: 100%;
+        clear: both;
+        .logo{
+            font-size: 1.3em;
+            line-height: 1.9em;
+            font-weight: bold;
+            display: inline-block;
+            img{
+                height: 36px;
+                margin: 4px 0 -10px 0;
+            }
+        }
+        .divider{
+            display: inline-block;
+            &:after{
+                content: "|";
+                margin: 12px;
+            }
+        }
+        .options{
+            display: inline-block;
+            clear: both;
+            width: 55%;
+            vertical-align: middle;
+            padding-top: 10px;
+            .right {
+                a{
+                   border-radius: 3px;
+                   background-color: #e98325;
+                   padding: 6px 13px;
+                   margin-left: 1px;
+                }
+            }
+            .left{
+                input{
+                    line-height: 1.5em;
+                    font-size: 1em;
+                    padding: 3px;
+                    border: 0;
+                    border-radius: 2px;
+                    background-color: #4d4d4d;
+                    width: 100%;
+                }
+                .icon-search{
+                    position: relative;
+                    top: -20px;
+                }
+            }
+        }
+    }
+    nav{
+        background-color: #4d4d4d;
+        width: 100%;
+        clear: both;
+        ul{
+            height: 29px;
+            width: 75%;
+            margin: 0 auto;
+            text-align: center;
+            line-height: 2em;
+            li{
+                float: left;
+                margin-left: 5em;
+            }
+        }
+    }
+}
