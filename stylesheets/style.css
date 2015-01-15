@@ -331,7 +331,7 @@ nav ul li a:hover {
   background: url("../images/background.jpg");
 }
 /* line 101, ../sass/style.scss */
-.main-content article {
+.main-content div {
   max-width: 940px;
   margin: 0 auto;
   padding-top: 20px;
