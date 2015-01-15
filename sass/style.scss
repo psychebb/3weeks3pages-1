@@ -38,10 +38,10 @@ body{
        border-radius: 3px;
        padding: 6px 13px;
     }
-    .left{
+    .pull-left{
         float: left;
     }
-    .right{
+    .pull-right{
         float: right;
     }
     .horizontal-divider{
@@ -60,6 +60,9 @@ body{
     }
     li{
         color: #bbb;
+    }
+    img{
+        display: inline-block;
     }
     header{
         padding: 10px;
@@ -90,23 +93,36 @@ body{
             width: 55%;
             vertical-align: middle;
             padding-top: 10px;
-            .right {
+            .pull-right {
                 .button{
                    background-color: #e98325;
                    margin-left: 1px;
                    cursor: pointer;
+                   &.upload{
+                    padding: 8px 14px;
+                    position: relative;
+                    bottom: 2px;
+                   }
+                   .hd{
+                    background: url("../images/hd-icn.svg") no-repeat 0 2px;
+                    width: 18px;
+                    height: 16px;
+                    display: inline-block;
+                   }
                 }
                 .icon-user{
                     background: none;
                     color: #d7d7d7;
-                    font-size: 1.7em;
+                    font-size: 2em;
+                    position: relative;
+                    top: 5px;
                     &.button{
                         border: none;
                         padding: 0;
                     }
                 }
             }
-            .left{
+            .pull-left{
                 input[type=search]{
                     line-height: 1.5em;
                     font-size: 1em;
@@ -157,6 +173,25 @@ body{
             border: 1px solid #fff;
             padding: 9px 12px;
             font-size: 1.5em;
+        }
+        .hills{
+            text-align: center;
+            height: 330px;
+            margin: 40px auto;
+            img{
+                position: relative;
+                vertical-align: bottom;
+                &.left{
+                    z-index: 1;
+                }
+                &.middle{
+                    left: -50px;
+                }
+                &.right{
+                    right: -200px;
+                    top: -165px;
+                }
+            }
         }
     }
     footer{
