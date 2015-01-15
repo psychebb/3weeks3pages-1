@@ -64,7 +64,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   display: block;
 }
 
-/* line 4, ../sass/style.scss */
+/* line 2, ../sass/common.scss */
 body {
   background-color: #393939;
   width: 100%;
@@ -77,142 +77,151 @@ body {
   font-size: 14px;
   font-family: 'Helvetica Neue';
 }
-/* line 15, ../sass/style.scss */
+/* line 13, ../sass/common.scss */
 body h1 {
   font-size: 3.5em;
   text-align: center;
   margin: 10px auto;
 }
-/* line 20, ../sass/style.scss */
+/* line 18, ../sass/common.scss */
 body h2 {
   font-size: 1.5em;
   text-align: center;
   margin: 10px auto;
 }
-/* line 25, ../sass/style.scss */
+/* line 23, ../sass/common.scss */
 body h6 {
   font-size: 1.3em;
   margin: 10px auto;
 }
-/* line 29, ../sass/style.scss */
+/* line 27, ../sass/common.scss */
 body a {
   text-decoration: none;
   color: #fff;
   display: inline-block;
 }
-/* line 33, ../sass/style.scss */
+/* line 31, ../sass/common.scss */
 body a:hover {
   text-decoration: none;
 }
-/* line 37, ../sass/style.scss */
+/* line 35, ../sass/common.scss */
 body .button {
   border-radius: 3px;
   padding: 6px 13px;
 }
-/* line 41, ../sass/style.scss */
+/* line 39, ../sass/common.scss */
 body .pull-left {
   float: left;
 }
-/* line 44, ../sass/style.scss */
+/* line 42, ../sass/common.scss */
 body .pull-right {
   float: right;
 }
-/* line 47, ../sass/style.scss */
+/* line 45, ../sass/common.scss */
 body .horizontal-divider {
   border-bottom: 1px solid #555555;
   margin: 0 auto;
   padding-top: 20px;
   width: 50px;
 }
-/* line 53, ../sass/style.scss */
+/* line 51, ../sass/common.scss */
+body .vertical-divider {
+  display: inline-block;
+  color: #555555;
+}
+/* line 54, ../sass/common.scss */
+body .vertical-divider:after {
+  content: "|";
+  margin: 12px;
+}
+/* line 59, ../sass/common.scss */
 body .clearfix:after {
   content: "";
   display: block;
   clear: both;
 }
-/* line 58, ../sass/style.scss */
+/* line 64, ../sass/common.scss */
 body .center {
   text-align: center;
 }
-/* line 61, ../sass/style.scss */
+/* line 67, ../sass/common.scss */
 body li {
   color: #bbb;
 }
-/* line 64, ../sass/style.scss */
+/* line 70, ../sass/common.scss */
 body img {
   display: inline-block;
 }
-/* line 67, ../sass/style.scss */
-body header {
+
+/* line 6, ../sass/style.scss */
+header {
   padding: 10px;
-  text-align: center;
   background-color: #2d2d2d;
   width: 100%;
   clear: both;
 }
-/* line 73, ../sass/style.scss */
-body header .logo {
+/* line 11, ../sass/style.scss */
+header .logo {
   font-size: 1.3em;
   line-height: 1.9em;
   font-weight: bold;
   display: inline-block;
 }
-/* line 78, ../sass/style.scss */
-body header .logo img {
+/* line 16, ../sass/style.scss */
+header .logo img {
   height: 36px;
   margin: 4px 0 -10px 0;
 }
-/* line 83, ../sass/style.scss */
-body header .vertical-divider {
-  display: inline-block;
-}
-/* line 85, ../sass/style.scss */
-body header .vertical-divider:after {
-  content: "|";
-  margin: 12px;
-}
-/* line 90, ../sass/style.scss */
-body header .options {
+/* line 21, ../sass/style.scss */
+header .options {
   display: inline-block;
   clear: both;
   width: 55%;
   vertical-align: middle;
   padding-top: 10px;
 }
-/* line 97, ../sass/style.scss */
-body header .options .pull-right .button {
+/* line 28, ../sass/style.scss */
+header .options .pull-right .button {
   background-color: #e98325;
   margin-left: 1px;
   cursor: pointer;
 }
-/* line 101, ../sass/style.scss */
-body header .options .pull-right .button.upload {
+/* line 32, ../sass/style.scss */
+header .options .pull-right .button.upload {
   padding: 8px 14px;
   position: relative;
   bottom: 2px;
 }
-/* line 106, ../sass/style.scss */
-body header .options .pull-right .button .hd {
+/* line 37, ../sass/style.scss */
+header .options .pull-right .button .hd {
   background: url("../images/hd-icn.svg") no-repeat 0 2px;
   width: 18px;
   height: 16px;
   display: inline-block;
 }
-/* line 113, ../sass/style.scss */
-body header .options .pull-right .icon-user {
+/* line 43, ../sass/style.scss */
+header .options .pull-right .button:hover {
+  background-color: #d76c03;
+}
+/* line 47, ../sass/style.scss */
+header .options .pull-right .icon-user {
   background: none;
   color: #d7d7d7;
   font-size: 2em;
   position: relative;
   top: 5px;
 }
-/* line 119, ../sass/style.scss */
-body header .options .pull-right .icon-user.button {
+/* line 53, ../sass/style.scss */
+header .options .pull-right .icon-user.button {
   border: none;
   padding: 0;
 }
-/* line 126, ../sass/style.scss */
-body header .options .pull-left input[type=search] {
+/* line 57, ../sass/style.scss */
+header .options .pull-right .icon-user:hover {
+  background: none;
+}
+/* line 63, ../sass/style.scss */
+header .options .pull-left input[type=search] {
   line-height: 1.5em;
   font-size: 1em;
   padding: 3px;
@@ -221,119 +230,142 @@ body header .options .pull-left input[type=search] {
   background-color: #4d4d4d;
   width: 100%;
 }
-/* line 135, ../sass/style.scss */
-body header .options .pull-left .icon-search {
+/* line 72, ../sass/style.scss */
+header .options .pull-left .icon-search {
   position: relative;
   top: -20px;
 }
-/* line 142, ../sass/style.scss */
-body nav {
+
+/* line 80, ../sass/style.scss */
+nav {
   background-color: #4d4d4d;
   width: 100%;
   clear: both;
 }
-/* line 146, ../sass/style.scss */
-body nav ul {
+/* line 84, ../sass/style.scss */
+nav ul {
   height: 29px;
   width: 75%;
   margin: 0 auto;
-  text-align: center;
   line-height: 2em;
 }
-/* line 152, ../sass/style.scss */
-body nav ul li {
+/* line 89, ../sass/style.scss */
+nav ul li {
   float: left;
   margin-left: 5em;
 }
-/* line 158, ../sass/style.scss */
-body .main-content {
-  background: url("../images/background.jpg");
-  text-align: center;
+/* line 92, ../sass/style.scss */
+nav ul li a:hover {
+  color: #07a;
 }
-/* line 161, ../sass/style.scss */
-body .main-content article {
+
+/* line 99, ../sass/style.scss */
+.main-content {
+  background: url("../images/background.jpg");
+}
+/* line 101, ../sass/style.scss */
+.main-content article {
   max-width: 940px;
   margin: 0 auto;
   padding-top: 20px;
 }
-/* line 166, ../sass/style.scss */
-body .main-content .create {
+/* line 106, ../sass/style.scss */
+.main-content .create {
   background-color: #2672ae;
   font-size: 1.5em;
   margin: 10px 10px 20px;
   padding: 10px 13px;
 }
-/* line 172, ../sass/style.scss */
-body .main-content .not-create {
+/* line 111, ../sass/style.scss */
+.main-content .create:hover {
+  background-color: #07a;
+}
+/* line 115, ../sass/style.scss */
+.main-content .not-create {
   border: 1px solid #fff;
   padding: 9px 12px;
   font-size: 1.5em;
 }
-/* line 177, ../sass/style.scss */
-body .main-content .hills {
-  text-align: center;
+/* line 119, ../sass/style.scss */
+.main-content .not-create:hover {
+  background-color: #fff;
+  color: #2672ae;
+}
+/* line 124, ../sass/style.scss */
+.main-content .hills {
   height: 330px;
   margin: 40px auto;
 }
-/* line 181, ../sass/style.scss */
-body .main-content .hills img {
+/* line 127, ../sass/style.scss */
+.main-content .hills img {
   position: relative;
   vertical-align: bottom;
+  cursor: pointer;
 }
-/* line 184, ../sass/style.scss */
-body .main-content .hills img.left {
+/* line 131, ../sass/style.scss */
+.main-content .hills img.left {
   z-index: 1;
 }
-/* line 187, ../sass/style.scss */
-body .main-content .hills img.middle {
+/* line 134, ../sass/style.scss */
+.main-content .hills img.middle {
   left: -50px;
 }
-/* line 190, ../sass/style.scss */
-body .main-content .hills img.right {
+/* line 137, ../sass/style.scss */
+.main-content .hills img.right {
   right: -200px;
   top: -165px;
 }
-/* line 197, ../sass/style.scss */
-body footer {
+
+/* line 145, ../sass/style.scss */
+footer {
   max-width: 940px;
-  text-align: center;
   margin: 0 auto;
 }
-/* line 201, ../sass/style.scss */
-body footer .ad-message {
+/* line 148, ../sass/style.scss */
+footer .ad-message {
   margin-top: 40px;
   font-size: 1.9em;
   line-height: 1.5em;
 }
-/* line 206, ../sass/style.scss */
-body footer .explanations {
+/* line 153, ../sass/style.scss */
+footer .explanations {
   margin: 40px auto 0;
   width: 100%;
 }
-/* line 209, ../sass/style.scss */
-body footer .explanations li {
+/* line 156, ../sass/style.scss */
+footer .explanations li {
   float: left;
   width: 33.33%;
   position: relative;
 }
-/* line 213, ../sass/style.scss */
-body footer .explanations li .icon-angle-right {
+/* line 160, ../sass/style.scss */
+footer .explanations li h6 {
+  color: #fff;
+}
+/* line 163, ../sass/style.scss */
+footer .explanations li .icon-angle-right {
   font-size: 2.2em;
   font-weight: 1;
   position: absolute;
   right: -30px;
   top: 11px;
+  color: #555555;
 }
-/* line 222, ../sass/style.scss */
-body footer .create {
+/* line 173, ../sass/style.scss */
+footer .create {
   font-size: 1.5em;
   margin: 40px 10px 20px;
   padding: 10px 13px;
   background-color: #fff;
   color: #2672ae;
 }
-/* line 229, ../sass/style.scss */
-body footer .copy-right {
+/* line 179, ../sass/style.scss */
+footer .create:hover {
+  background-color: #eee;
+  color: #07a;
+}
+/* line 184, ../sass/style.scss */
+footer .copy-right {
   margin: 40px auto;
   color: #bbb;
 }

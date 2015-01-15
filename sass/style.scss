@@ -1,234 +1,188 @@
 @import "compass/reset";
 @import "compass/css3";
 @import "fontello.css";
-body{
-    background-color: #393939;
+@import "variables.scss";
+@import "common.scss";
+header{
+    padding: 10px;
+    background-color: #2d2d2d;
     width: 100%;
-    height: 100vh;
-    position: absolute;
-    top: 0;
-    left: 0;
-    margin: 0 auto;
-    color: #fff;
-    font-size: 14px;
-    font-family: 'Helvetica Neue';
-    h1{
-        font-size: 3.5em;
-        text-align: center;
-        margin: 10px auto;
-    }
-    h2{
-        font-size: 1.5em;
-        text-align: center;
-        margin: 10px auto;
-    }
-    h6{
+    clear: both;
+    .logo{
         font-size: 1.3em;
-        margin: 10px auto;
-    }
-    a{
-        text-decoration: none;
-        color: #fff;
+        line-height: 1.9em;
+        font-weight: bold;
         display: inline-block;
-        &:hover{
-            text-decoration: none;
+        img{
+            height: 36px;
+            margin: 4px 0 -10px 0;
         }
     }
-    .button{
-       border-radius: 3px;
-       padding: 6px 13px;
+    .options{
+        display: inline-block;
+        clear: both;
+        width: 55%;
+        vertical-align: middle;
+        padding-top: 10px;
+        .pull-right {
+            .button{
+               background-color: #e98325;
+               margin-left: 1px;
+               cursor: pointer;
+               &.upload{
+                padding: 8px 14px;
+                position: relative;
+                bottom: 2px;
+               }
+               .hd{
+                background: url("../images/hd-icn.svg") no-repeat 0 2px;
+                width: 18px;
+                height: 16px;
+                display: inline-block;
+               }
+               &:hover{
+                   background-color: #d76c03;
+               }
+            }
+            .icon-user{
+                background: none;
+                color: #d7d7d7;
+                font-size: 2em;
+                position: relative;
+                top: 5px;
+                &.button{
+                    border: none;
+                    padding: 0;
+                }
+                &:hover{
+                    background: none;
+                }
+            }
+        }
+        .pull-left{
+            input[type=search]{
+                line-height: 1.5em;
+                font-size: 1em;
+                padding: 3px;
+                border: 0;
+                border-radius: 2px;
+                background-color: #4d4d4d;
+                width: 100%;
+            }
+            .icon-search{
+                position: relative;
+                top: -20px;
+            }
+        }
     }
-    .pull-left{
-        float: left;
+}
+
+nav{
+    background-color: #4d4d4d;
+    width: 100%;
+    clear: both;
+    ul{
+        height: 29px;
+        width: 75%;
+        margin: 0 auto;
+        line-height: 2em;
+        li{
+            float: left;
+            margin-left: 5em;
+            a:hover{
+                color: $dark-blue;
+            }
+        }
     }
-    .pull-right{
-        float: right;
-    }
-    .horizontal-divider{
-        border-bottom: 1px solid #555555;
+}
+
+.main-content{
+    background: url('../images/background.jpg');
+    article{
+        max-width: 940px;
         margin: 0 auto;
         padding-top: 20px;
-        width: 50px;
     }
-    .clearfix:after{
-        content:"";
-        display: block;
-        clear:both;
+    .create{
+        background-color: $blue;
+        font-size: 1.5em;
+        margin: 10px 10px 20px;
+        padding: 10px 13px;
+        &:hover{
+            background-color: $dark-blue;
+        }
     }
-    .center{
-        text-align: center;
+    .not-create{
+        border: 1px solid $white;
+        padding: 9px 12px;
+        font-size: 1.5em;
+        &:hover{
+            background-color: $white;
+            color: $blue;
+        }
     }
-    li{
+    .hills{
+        height: 330px;
+        margin: 40px auto;
+        img{
+            position: relative;
+            vertical-align: bottom;
+            cursor: pointer;
+            &.left{
+                z-index: 1;
+            }
+            &.middle{
+                left: -50px;
+            }
+            &.right{
+                right: -200px;
+                top: -165px;
+            }
+        }
+    }
+}
+
+footer{
+    max-width: 940px;
+    margin: 0 auto;
+    .ad-message{
+        margin-top: 40px;
+        font-size: 1.9em;
+        line-height: 1.5em;
+    }
+    .explanations{
+        margin: 40px auto 0;
+        width: 100%;
+        li{
+            float: left;
+            width: 33.33%;
+            position: relative;
+            h6{
+                color: $white;
+            }
+            .icon-angle-right{
+                font-size: 2.2em;
+                font-weight: 1;
+                position: absolute;
+                right: -30px;
+                top: 11px;
+                color: $divider-color;
+            }
+        }
+    }
+    .create{
+        font-size: 1.5em;
+        margin: 40px 10px 20px;
+        padding: 10px 13px;
+        background-color: $white;
+        color: $blue;
+        &:hover{
+            background-color: #eee;
+            color: $dark-blue;
+        }
+    }
+    .copy-right{
+        margin: 40px auto;
         color: #bbb;
-    }
-    img{
-        display: inline-block;
-    }
-    header{
-        padding: 10px;
-        text-align: center;
-        background-color: #2d2d2d;
-        width: 100%;
-        clear: both;
-        .logo{
-            font-size: 1.3em;
-            line-height: 1.9em;
-            font-weight: bold;
-            display: inline-block;
-            img{
-                height: 36px;
-                margin: 4px 0 -10px 0;
-            }
-        }
-        .vertical-divider{
-            display: inline-block;
-            &:after{
-                content: "|";
-                margin: 12px;
-            }
-        }
-        .options{
-            display: inline-block;
-            clear: both;
-            width: 55%;
-            vertical-align: middle;
-            padding-top: 10px;
-            .pull-right {
-                .button{
-                   background-color: #e98325;
-                   margin-left: 1px;
-                   cursor: pointer;
-                   &.upload{
-                    padding: 8px 14px;
-                    position: relative;
-                    bottom: 2px;
-                   }
-                   .hd{
-                    background: url("../images/hd-icn.svg") no-repeat 0 2px;
-                    width: 18px;
-                    height: 16px;
-                    display: inline-block;
-                   }
-                }
-                .icon-user{
-                    background: none;
-                    color: #d7d7d7;
-                    font-size: 2em;
-                    position: relative;
-                    top: 5px;
-                    &.button{
-                        border: none;
-                        padding: 0;
-                    }
-                }
-            }
-            .pull-left{
-                input[type=search]{
-                    line-height: 1.5em;
-                    font-size: 1em;
-                    padding: 3px;
-                    border: 0;
-                    border-radius: 2px;
-                    background-color: #4d4d4d;
-                    width: 100%;
-                }
-                .icon-search{
-                    position: relative;
-                    top: -20px;
-                }
-            }
-        }
-    }
-    nav{
-        background-color: #4d4d4d;
-        width: 100%;
-        clear: both;
-        ul{
-            height: 29px;
-            width: 75%;
-            margin: 0 auto;
-            text-align: center;
-            line-height: 2em;
-            li{
-                float: left;
-                margin-left: 5em;
-            }
-        }
-    }
-    .main-content{
-        background: url('../images/background.jpg');
-        text-align: center;
-        article{
-            max-width: 940px;
-            margin: 0 auto;
-            padding-top: 20px;
-        }
-        .create{
-            background-color: #2672ae;
-            font-size: 1.5em;
-            margin: 10px 10px 20px;
-            padding: 10px 13px;
-        }
-        .not-create{
-            border: 1px solid #fff;
-            padding: 9px 12px;
-            font-size: 1.5em;
-        }
-        .hills{
-            text-align: center;
-            height: 330px;
-            margin: 40px auto;
-            img{
-                position: relative;
-                vertical-align: bottom;
-                &.left{
-                    z-index: 1;
-                }
-                &.middle{
-                    left: -50px;
-                }
-                &.right{
-                    right: -200px;
-                    top: -165px;
-                }
-            }
-        }
-    }
-    footer{
-        max-width: 940px;
-        text-align: center;
-        margin: 0 auto;
-        .ad-message{
-            margin-top: 40px;
-            font-size: 1.9em;
-            line-height: 1.5em;
-        }
-        .explanations{
-            margin: 40px auto 0;
-            width: 100%;
-            li{
-                float: left;
-                width: 33.33%;
-                position: relative;
-                .icon-angle-right{
-                    font-size: 2.2em;
-                    font-weight: 1;
-                    position: absolute;
-                    right: -30px;
-                    top: 11px;
-                }
-            }
-        }
-        .create{
-            font-size: 1.5em;
-            margin: 40px 10px 20px;
-            padding: 10px 13px;
-            background-color: #fff;
-            color: #2672ae;
-        }
-        .copy-right{
-            margin: 40px auto;
-            color: #bbb;
-        }
     }
 }
